@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Validation AUC across six controlled embedding ablations</title>
+  <desc id="desc">Residual quantization is highest at 0.895484. CAGF reaches 0.891218 and improves on fixed fusion at 0.889229.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fafc"/><stop offset="1" stop-color="#edf5f7"/></linearGradient>
+    <linearGradient id="best" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f8f91"/><stop offset="1" stop-color="#35c2b0"/></linearGradient>
+    <style>.t{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.axis{stroke:#b9cbd2;stroke-width:1}.grid{stroke:#dbe6ea;stroke-width:1;stroke-dasharray:5 6}.name{font-size:18px;fill:#203642}.value{font-size:17px;font-weight:700;fill:#203642}.note{font-size:16px;fill:#58717e}</style>
+  </defs>
+  <rect width="1200" height="620" rx="26" fill="url(#bg2)"/>
+  <text x="54" y="58" class="t" font-size="29" font-weight="760" fill="#122c38">Controlled embedding ablation</text>
+  <text x="54" y="88" class="t note">Validation AUC · fixed DIN evaluator · only the item representation changes</text>
+  <line x1="320" y1="112" x2="320" y2="520" class="axis"/><line x1="500" y1="112" x2="500" y2="520" class="grid"/><line x1="680" y1="112" x2="680" y2="520" class="grid"/><line x1="860" y1="112" x2="860" y2="520" class="grid"/><line x1="1040" y1="112" x2="1040" y2="520" class="grid"/>
+  <text x="320" y="544" class="t note" text-anchor="middle">0.86</text><text x="500" y="544" class="t note" text-anchor="middle">0.87</text><text x="680" y="544" class="t note" text-anchor="middle">0.88</text><text x="860" y="544" class="t note" text-anchor="middle">0.89</text><text x="1040" y="544" class="t note" text-anchor="middle">0.90</text>
+
+  <text x="54" y="146" class="t name">A0 · Official baseline</text><rect x="320" y="121" width="124" height="34" rx="8" fill="#9eb5be"/><text x="458" y="146" class="t value">0.866881</text>
+  <text x="54" y="216" class="t name" font-weight="750">A1 · Official + RQ</text><rect x="320" y="191" width="639" height="34" rx="8" fill="url(#best)"/><text x="973" y="216" class="t value">0.895484</text><rect x="968" y="180" width="135" height="22" rx="11" fill="#d5f5ee"/><text x="1035" y="196" class="t" font-size="13" font-weight="750" text-anchor="middle" fill="#087b77">BEST · +3.30%</text>
+  <text x="54" y="286" class="t name">A2 · Official + behavior SVD</text><rect x="320" y="261" width="190" height="34" rx="8" fill="#6aa7b5"/><text x="524" y="286" class="t value">0.870555</text>
+  <text x="54" y="356" class="t name">A3 · Official + MM mean</text><rect x="320" y="331" width="545" height="34" rx="8" fill="#498fa3"/><text x="879" y="356" class="t value">0.890280</text>
+  <text x="54" y="426" class="t name">A4 · Fixed four-source fusion</text><rect x="320" y="401" width="526" height="34" rx="8" fill="#d79758"/><text x="860" y="426" class="t value">0.889229</text>
+  <text x="54" y="496" class="t name" font-weight="750">A5 · Confidence-aware gate</text><rect x="320" y="471" width="562" height="34" rx="8" fill="#8874d8"/><text x="896" y="496" class="t value">0.891218</text>
+
+  <rect x="54" y="570" width="1092" height="1" fill="#cbdbe0"/><text x="54" y="597" class="t note">CAGF improved fixed fusion by +0.001989 AUC; RQ-only remained best by +0.004266.</text>
+</svg>

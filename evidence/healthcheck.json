@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "required_files",
+      "status": "PASS",
+      "detail": "20 public files found"
+    },
+    {
+      "name": "python_syntax",
+      "status": "PASS",
+      "detail": "compiled 23 Python files"
+    },
+    {
+      "name": "ablation_results",
+      "status": "PASS",
+      "detail": "A0-A5 retained; A1-A0=+0.028603; A5-A4=+0.001989"
+    },
+    {
+      "name": "cagf_artifacts",
+      "status": "PASS",
+      "detail": "91,718 items; adaptive weights; AUC=0.891218"
+    },
+    {
+      "name": "attribution",
+      "status": "PASS",
+      "detail": "baseline, dataset, reference ranker, and original work are separated"
+    },
+    {
+      "name": "public_hygiene",
+      "status": "PASS",
+      "detail": "no dataset, checkpoint, archive, or file larger than 10 MiB"
+    },
+    {
+      "name": "secret_scan",
+      "status": "PASS",
+      "detail": "no common credential patterns found"
+    }
+  ]
+}

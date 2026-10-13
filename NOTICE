@@ -1,0 +1,17 @@
+MMCTR-CAGF
+Copyright 2026 Haozhe Cui
+
+This repository is an independent reproduction and extension study built on:
+
+- FuxiCTR and the official WWW 2025 MM-CTR challenge baseline.
+- The MicroLens-1M benchmark dataset.
+- An Apache-2.0 open implementation of the published Transformer-DCN Task 2 solution.
+
+The fixed DIN evaluator, challenge data-loader conventions, and training entry-point
+structure originate from the official baseline. Transformer_DCN.py reproduces and
+adapts the published reference architecture. Original project contributions include
+the embedding-side methods, Confidence-Aware Gated Fusion, controlled ablations,
+pipeline integration, verification tooling, and documentation.
+
+See docs/REFERENCES.md and docs/EVIDENCE_AND_ATTRIBUTION.md for source links and
+the detailed ownership boundary. The MicroLens data are not redistributed here.

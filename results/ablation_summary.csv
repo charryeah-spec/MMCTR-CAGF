@@ -1,0 +1,7 @@
+rank,variant_id,label,purpose,official,rq,behavior_svd,mm_ensemble,cagf,best_auc,best_epoch,delta_vs_a0,relative_lift_pct,item_info
+1,A1_rq,官方+RQ,验证结构平滑,1,1,0,0,0,0.895484,12,0.028603,3.30,data/ablation_embeddings/A1_rq_item_info.parquet
+2,A5_cagf,置信度门控融合,逐物品可靠性加权,1,1,1,1,1,0.891218,14,0.024337,2.81,data/MicroLens_1M_x1/ablation/item_info_A5.parquet
+3,A3_mm,官方+多版本均值,验证集成降方差,1,0,0,1,0,0.890280,11,0.023399,2.70,data/ablation_embeddings/A3_mm_item_info.parquet
+4,A4_full,全量融合,固定四源权重,1,1,1,1,0,0.889229,16,0.022348,2.58,data/ablation_embeddings/A4_full_item_info.parquet
+5,A2_svd,官方+行为SVD,验证行为共现信号,1,0,1,0,0,0.870555,14,0.003674,0.42,data/ablation_embeddings/A2_svd_item_info.parquet
+6,A0_baseline,官方基线,对照组,1,0,0,0,0,0.866881,14,0.000000,0.00,data/ablation_embeddings/A0_baseline_item_info.parquet

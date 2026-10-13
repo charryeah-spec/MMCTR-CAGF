@@ -1,0 +1,13 @@
+# Install the CUDA-compatible PyTorch wheel for your system when GPU training.
+torch>=1.13,<3
+fuxictr==2.3.7
+numpy>=1.23,<2
+pandas>=1.5,<2.3
+scipy>=1.9,<2
+scikit-learn>=1.3,<1.5
+pyarrow>=10
+polars<=1.0.0
+PyYAML>=6
+h5py>=3.8
+tqdm>=4.64
+keras-preprocessing>=1.1.2

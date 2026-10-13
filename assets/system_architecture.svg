@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-labelledby="title desc">
+  <title id="title">Two-stage multimodal CTR prediction architecture</title>
+  <desc id="desc">Four offline embedding sources are normalized and fused, then consumed by a target-aware Transformer and DCN ranker.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081426"/><stop offset="1" stop-color="#102b45"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#15c8c8"/><stop offset="1" stop-color="#61e3d2"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9b52"/><stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".25"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#83a7c2"/></marker>
+    <style>
+      .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.label{font-size:18px;fill:#dceaf5}.small{font-size:15px;fill:#8fb0c6}.stage{font-size:15px;font-weight:700;letter-spacing:2px}.box{fill:#102d47;stroke:#2f5874;stroke-width:1.5}.line{stroke:#83a7c2;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="640" rx="28" fill="url(#bg)"/>
+  <text x="64" y="62" class="sans" font-size="30" font-weight="750" fill="#f5fbff">Decoupled representation → ranking pipeline</text>
+  <text x="64" y="92" class="sans small">Offline embeddings are versioned independently from the online CTR model.</text>
+
+  <text x="64" y="146" class="sans stage" fill="#38d6cb">01 · OFFLINE REPRESENTATION</text>
+  <g filter="url(#shadow)">
+    <rect class="box" x="64" y="174" width="250" height="78" rx="14"/><circle cx="91" cy="213" r="8" fill="#20c9c2"/><text x="112" y="207" class="sans label">Official multimodal</text><text x="112" y="232" class="sans small">BERT + CLIP features</text>
+    <rect class="box" x="64" y="270" width="250" height="78" rx="14"/><circle cx="91" cy="309" r="8" fill="#20c9c2"/><text x="112" y="303" class="sans label">Residual quantizer</text><text x="112" y="328" class="sans small">3-stage K-Means</text>
+    <rect class="box" x="64" y="366" width="250" height="78" rx="14"/><circle cx="91" cy="405" r="8" fill="#20c9c2"/><text x="112" y="399" class="sans label">Behavior graph</text><text x="112" y="424" class="sans small">co-occurrence → SVD</text>
+    <rect class="box" x="64" y="462" width="250" height="78" rx="14"/><circle cx="91" cy="501" r="8" fill="#20c9c2"/><text x="112" y="495" class="sans label">MM ensemble</text><text x="112" y="520" class="sans small">multi-version mean</text>
+  </g>
+
+  <path class="line" d="M314 213 C380 213 390 320 440 320"/><path class="line" d="M314 309 L440 320"/><path class="line" d="M314 405 C380 405 390 332 440 332"/><path class="line" d="M314 501 C400 501 402 344 440 344"/>
+  <g filter="url(#shadow)"><rect x="450" y="260" width="230" height="140" rx="20" fill="#123c53" stroke="#2bcfc6" stroke-width="2"/><text x="565" y="308" text-anchor="middle" class="sans" font-size="21" font-weight="700" fill="#efffff">ID-safe fusion</text><text x="565" y="338" text-anchor="middle" class="sans small">validate · align · normalize</text><rect x="492" y="362" width="146" height="7" rx="4" fill="url(#cyan)"/></g>
+  <path class="line" d="M680 330 L762 330"/>
+
+  <text x="780" y="146" class="sans stage" fill="#ffb45d">02 · ONLINE RANKING</text>
+  <g filter="url(#shadow)">
+    <rect class="box" x="780" y="250" width="190" height="160" rx="18"/><text x="875" y="300" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#fff4e7">Target-aware</text><text x="875" y="329" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#fff4e7">Transformer</text><text x="875" y="365" text-anchor="middle" class="sans small">sequence × candidate</text>
+    <rect class="box" x="1030" y="250" width="190" height="160" rx="18"/><text x="1125" y="299" text-anchor="middle" class="sans" font-size="20" font-weight="700" fill="#fff4e7">DCN v2 + DNN</text><text x="1125" y="333" text-anchor="middle" class="sans small">explicit crosses</text><text x="1125" y="358" text-anchor="middle" class="sans small">+ nonlinear features</text>
+    <rect x="1266" y="273" width="90" height="114" rx="18" fill="#493622" stroke="#ffae56" stroke-width="2"/><text x="1311" y="318" text-anchor="middle" class="sans" font-size="20" font-weight="750" fill="#fff8ed">pCTR</text><text x="1311" y="347" text-anchor="middle" class="sans small">0–1</text>
+  </g>
+  <path class="line" d="M970 330 L1022 330"/><path class="line" d="M1220 330 L1258 330"/>
+
+  <rect x="780" y="462" width="576" height="78" rx="14" fill="#132b40" stroke="#294c65"/><text x="808" y="494" class="sans" font-size="16" font-weight="700" fill="#e7f3fa">Controlled evaluation</text><text x="808" y="521" class="sans small">Fixed DIN for A0–A5 · AUC + log loss · Codabench packaging</text>
+  <rect x="64" y="584" width="1292" height="2" fill="#29485e"/><text x="64" y="614" class="sans small">MicroLens-1M · 128-D item vectors · configuration-driven experiments · attribution-preserving implementation</text>
+</svg>

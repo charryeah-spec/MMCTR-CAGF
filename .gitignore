@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments and editors
+.env
+.env.*
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Datasets and generated features
+data/**/*.parquet
+data/**/*.pkl
+data/**/*vocab*.json
+data/**/*feature_map*.json
+embeddings/
+
+# Training and evaluation artifacts
+checkpoints/
+logs/
+*.log
+*.model
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Generated predictions and submission archives
+submission/*.csv
+submission/*.zip
+submit/
+
+# FuxiCTR outputs
+*.csv
+!results/*.csv
+
+# Build and temporary files
+dist/
+build/
+*.tmp
+~$*
